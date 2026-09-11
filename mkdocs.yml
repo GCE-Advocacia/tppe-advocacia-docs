@@ -1,10 +1,10 @@
 site_name: Documentação Técnica
 site_description: Documentação técnica do projeto de advocacia
 site_author: Equipe 8 de TPPE
-site_url: https://Projeto-Advocacia-TPPE.github.io/tppe-advocacia-docs
+site_url: https://gce-advocacia.github.io/tppe-advocacia-docs/
 
-repo_name: Projeto-Advocacia-TPPE/tppe-advocacia-docs
-repo_url: https://github.com/Projeto-Advocacia-TPPE/tppe-advocacia-docs
+repo_name: GCE-Advocacia/tppe-advocacia-docs
+repo_url: https://github.com/GCE-Advocacia/tppe-advocacia-docs
 
 theme:
   name: material
