@@ -56,6 +56,9 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
+  - GCE:
+    - Backlog do Produto: gce/backlog.md
+    - Sprint 1: gce/sprint-1.md
   - Backlog:
     - Visão Geral: backlog/index.md
     - Status da Implementação: backlog/status.md
