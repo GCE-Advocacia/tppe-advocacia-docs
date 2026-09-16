@@ -19,7 +19,7 @@
 |---|---|---|---|
 | [US01](./backlog/us01.md) | Calendário de pagamentos | Back-end e front-end: Anne, Pablo, Matheus | Concluído |
 | [US03](./backlog/us03.md) | Controle de faturamento | Guilherme, José, Lucas | Concluído |
-| [US05](./backlog/us05.md) | Criação e Atribuição de Tarefas do Processo | Artur, Bessa, Isabelle | Concluído |
+| [US05](./backlog/us05.md) | Criação e Atribuição de Tarefas do Processo | Artur, Bessa, Isabelle | Concluído [`98dbb2e`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/98dbb2e04ab2439e8ff8ca175fea7046c249fd79) [`f547190`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/f54719076de213c758caf03bc83a61be7b828293) [`f804c09`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/f804c09833bb7b4a92fe568b1dc9cc0e2ae0bd89) [`1158005`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/115800530137887b332d9040c1566f0fd5daf1e0)  [`90f757e`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/90f757e1104f779e75c2c949c8e5166735e72f91)  [`705823f`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/705823ff10b425020c7777e82cf4d6fbad813d09)  [`4b446eb`](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/commit/4b446eb2ec5e3622926e3afde5962134aa94e316) |
 | [US07](./backlog/us07.md) | Troca de cores da Landing Page | Gabriel, Fabio, Daniel | Concluído |
 
 ---
