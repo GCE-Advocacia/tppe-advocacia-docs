@@ -65,7 +65,7 @@ nav:
       - US06 - Troca de imagens da Landing Page: gce/backlog/us06.md
       - US07 - Troca de cores da Landing Page: gce/backlog/us07.md
       - US08 - Troca da logo: gce/backlog/us08.md
-    - Sprint 1: gce/sprint-1.md
+    - Sprint 1: gce/sprint-01.md
   - Backlog:
     - Visão Geral: backlog/index.md
     - Status da Implementação: backlog/status.md
