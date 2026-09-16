@@ -11,11 +11,11 @@
 | Artur / Bessa / Isabelle | 1 | [US05](./backlog/us05.md) | Criação e Atribuição de Tarefas do Processo |
 | Gabriel / Fabio / Daniel | 1 | [US07](./backlog/us07.md) | Troca de cores da Landing Page |
 
-## Tarefas Realizadas
+<!-- ## Tarefas Realizadas
 
 | ID | Tarefa | Responsáveis | US | Commits |
 |---|---|---|---|---|
-| T01 | Configurar a documentação no fork do GCE: apontar o MkDocs para a organização GCE-Advocacia, habilitar o GitHub Pages e o deploy automático | Artur | - | [5b4993e](https://github.com/GCE-Advocacia/tppe-advocacia-docs/commit/5b4993e), [4724010](https://github.com/GCE-Advocacia/tppe-advocacia-docs/commit/4724010) |
+| T01 | Configurar a documentação no fork do GCE: apontar o MkDocs para a organização GCE-Advocacia, habilitar o GitHub Pages e o deploy automático | Artur | - | [5b4993e](https://github.com/GCE-Advocacia/tppe-advocacia-docs/commit/5b4993e), [4724010](https://github.com/GCE-Advocacia/tppe-advocacia-docs/commit/4724010) | -->
 
 ---
 
