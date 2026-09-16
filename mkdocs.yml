@@ -57,7 +57,16 @@ markdown_extensions:
 nav:
   - Inicio: index.md
   - GCE:
-    - Backlog do Produto: gce/backlog.md
+    - Backlog do Produto:
+      - Visão Geral: gce/backlog/index.md
+      - US01 - Calendário de pagamentos: gce/backlog/us01.md
+      - US02 - Notificações de vencimento: gce/backlog/us02.md
+      - US03 - Controle de faturamento: gce/backlog/us03.md
+      - US04 - Gestão de documentos: gce/backlog/us04.md
+      - US05 - Atribuição de tarefas: gce/backlog/us05.md
+      - US06 - Troca de imagens da Landing Page: gce/backlog/us06.md
+      - US07 - Troca de cores da Landing Page: gce/backlog/us07.md
+      - US08 - Troca da logo: gce/backlog/us08.md
     - Sprint 1: gce/sprint-1.md
   - Backlog:
     - Visão Geral: backlog/index.md
