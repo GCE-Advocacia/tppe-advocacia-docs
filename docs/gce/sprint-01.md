@@ -24,21 +24,11 @@
 
 ---
 
-## Garantia de Qualidade
-
-| ID | Entrega | Cobre | Responsável | Status |
-|---|---|---|---|---|
-| [QA0X] | [Nome/Descrição da Entrega de QA] | [US ou Escopo coberto] | [Nome do Responsável] | [Status] |
-
-
----
-
 ## Resumo
 
 - *Líder da Apresentação*: Anne de Capdeville
 - *Total de US concluídas:* 4 de 4 (US01, US03, US05, US07)
 - *US em revisão:* 0 
-- *Entregas de QA:* [Qtd de entregas - Dados não fornecidos]
 - *Início da Sprint:* 01/09/2026
 - *Fim da Sprint:* 17/09/2026
 
