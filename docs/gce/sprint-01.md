@@ -34,6 +34,20 @@
 
 ---
 
+## Vídeos de Reuniões 
+
+# Reunião 10/09
+[Assista ao vídeo no YouTube](https://youtu.be/tndqa9qK_hk)
+
+# Reunião 15/09
+[Assista ao vídeo no Youtube](https://youtu.be/8r4-lii9yfI)
+
+# Reunião 16/09
+
+[Assista ao vídeo no Youtube](https://youtu.be/6gcghNBvTDA)
+
+---
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor(es) |
