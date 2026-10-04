@@ -12,29 +12,31 @@
         <meta name="author" content="Equipe 8 de TPPE">
       
       
-        <link rel="canonical" href="https://gce-advocacia.github.io/tppe-advocacia-docs/prototipo/">
+        <link rel="canonical" href="https://gce-advocacia.github.io/tppe-advocacia-docs/gce/backlog/us09/">
       
       
-        <link rel="prev" href="../arquitetura/modelo-fisicodb/">
+        <link rel="prev" href="../us08/">
       
+      
+        <link rel="next" href="../../sprint-01/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Protótipo - Documentação Técnica</title>
+        <title>US09 - Armazenamento no Google Drive - Documentação Técnica</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prototipo" class="md-skip">
+        <a href="#us09-armazenamento-de-documentos-no-google-drive" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -94,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href=".." title="Documentação Técnica" class="md-header__button md-logo" aria-label="Documentação Técnica" data-md-component="logo">
+    <a href="../../.." title="Documentação Técnica" class="md-header__button md-logo" aria-label="Documentação Técnica" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protótipo
+              US09 - Armazenamento no Google Drive
             
           </span>
         </div>
@@ -226,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -243,6 +245,8 @@
   
   
   
+    
+  
   
     
     
@@ -250,11 +254,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../gce/backlog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -277,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../backlog/" class="md-tabs__link">
+        <a href="../../../backlog/" class="md-tabs__link">
           
   
   
@@ -297,7 +303,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../arquitetura/estrutura-inicial/" class="md-tabs__link">
+        <a href="../../../arquitetura/estrutura-inicial/" class="md-tabs__link">
           
   
   
@@ -313,11 +319,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../prototipo/" class="md-tabs__link">
         
   
   
@@ -358,7 +362,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Documentação Técnica" class="md-nav__button md-logo" aria-label="Documentação Técnica" data-md-component="logo">
+    <a href="../../.." title="Documentação Técnica" class="md-nav__button md-logo" aria-label="Documentação Técnica" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -388,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -412,24 +416,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -447,7 +456,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -462,6 +471,8 @@
                 
   
   
+    
+  
   
   
     
@@ -472,11 +483,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -497,7 +508,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -515,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -543,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us01/" class="md-nav__link">
+      <a href="../us01/" class="md-nav__link">
         
   
   
@@ -571,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us02/" class="md-nav__link">
+      <a href="../us02/" class="md-nav__link">
         
   
   
@@ -599,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us03/" class="md-nav__link">
+      <a href="../us03/" class="md-nav__link">
         
   
   
@@ -627,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us04/" class="md-nav__link">
+      <a href="../us04/" class="md-nav__link">
         
   
   
@@ -655,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us05/" class="md-nav__link">
+      <a href="../us05/" class="md-nav__link">
         
   
   
@@ -683,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us06/" class="md-nav__link">
+      <a href="../us06/" class="md-nav__link">
         
   
   
@@ -711,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us07/" class="md-nav__link">
+      <a href="../us07/" class="md-nav__link">
         
   
   
@@ -739,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/backlog/us08/" class="md-nav__link">
+      <a href="../us08/" class="md-nav__link">
         
   
   
@@ -764,10 +775,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../gce/backlog/us09/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US09 - Armazenamento no Google Drive
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -783,6 +821,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historia-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        História de Usuário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarefas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tarefas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critérios de Aceitação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observações
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -803,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gce/sprint-01/" class="md-nav__link">
+      <a href="../../sprint-01/" class="md-nav__link">
         
   
   
@@ -888,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backlog/" class="md-nav__link">
+      <a href="../../../backlog/" class="md-nav__link">
         
   
   
@@ -916,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backlog/status/" class="md-nav__link">
+      <a href="../../../backlog/status/" class="md-nav__link">
         
   
   
@@ -1001,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arquitetura/estrutura-inicial/" class="md-nav__link">
+      <a href="../../../arquitetura/estrutura-inicial/" class="md-nav__link">
         
   
   
@@ -1029,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arquitetura/modelo-fisicodb/" class="md-nav__link">
+      <a href="../../../arquitetura/modelo-fisicodb/" class="md-nav__link">
         
   
   
@@ -1061,37 +1174,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Protótipo
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../prototipo/" class="md-nav__link">
         
   
   
@@ -1107,98 +1193,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fluxos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fluxos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fluxos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#landing-page-web-landing-page-mobile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Landing Page Web / Landing Page Mobile]
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sistema-web-sistema-mobile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Sistema Web/ Sistema Mobile]
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#login-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Login Web]
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#observacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Observações
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1230,10 +1224,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
+  <a href="#informacoes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links
+        Informações
       
     </span>
   </a>
@@ -1241,52 +1235,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fluxos" class="md-nav__link">
+  <a href="#historia-de-usuario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fluxos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fluxos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#landing-page-web-landing-page-mobile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Landing Page Web / Landing Page Mobile]
+        História de Usuário
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#sistema-web-sistema-mobile" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#tarefas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [Sistema Web/ Sistema Mobile]
+        Tarefas
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#login-web" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceitacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [Login Web]
+        Critérios de Aceitação
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1321,85 +1298,77 @@
   
 
 
-<h1 id="prototipo">Protótipo<a class="headerlink" href="#prototipo" title="Permanent link">&para;</a></h1>
-<p>Protótipos de alta fidelidade desenvolvidos no Figma, cobrindo os principais fluxos do projeto.</p>
-<hr />
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h1 id="us09-armazenamento-de-documentos-no-google-drive">US09 — Armazenamento de documentos no Google Drive<a class="headerlink" href="#us09-armazenamento-de-documentos-no-google-drive" title="Permanent link">&para;</a></h1>
+<p>Item do <a href="../">Backlog do Produto</a> do projeto de advocacia na disciplina de GCE.</p>
+<h2 id="informacoes">Informações<a class="headerlink" href="#informacoes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Fluxo</th>
-<th>Link</th>
-<th>Status</th>
+<th>Campo</th>
+<th>Valor</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>[Landing Page Web]</td>
-<td><a href="https://www.figma.com/proto/Rmih83396wf3H6qCvkzieO/Prot%C3%B3tipo-TPPE?node-id=1-2&amp;p=f&amp;t=L21XkKe647YB8Seo-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A2&amp;show-proto-sidebar=1">Abrir no Figma</a></td>
-<td>✅ Concluído</td>
+<td>ID</td>
+<td>US09</td>
 </tr>
 <tr>
-<td>[Sistema Web]</td>
-<td><a href="https://www.figma.com/proto/Rmih83396wf3H6qCvkzieO/Prot%C3%B3tipo-TPPE?node-id=34-4263&amp;p=f&amp;t=L21XkKe647YB8Seo-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=34%3A4263&amp;show-proto-sidebar=1">Abrir no Figma</a></td>
-<td>✅ Concluído</td>
+<td>Sprint</td>
+<td>Backlog</td>
 </tr>
 <tr>
-<td>[Login Web]</td>
-<td><a href="https://www.figma.com/proto/Rmih83396wf3H6qCvkzieO/Prot%C3%B3tipo-TPPE?node-id=34-3853&amp;p=f&amp;t=L21XkKe647YB8Seo-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=34%3A3853&amp;show-proto-sidebar=1">Abrir no Figma</a></td>
-<td>✅ Concluído</td>
+<td>Responsáveis</td>
+<td>A definir</td>
 </tr>
 <tr>
-<td>[Landing Page Mobile]</td>
-<td><a href="https://www.figma.com/proto/Rmih83396wf3H6qCvkzieO/Prot%C3%B3tipo-TPPE?node-id=34-3853&amp;p=f&amp;t=L21XkKe647YB8Seo-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=34%3A3853&amp;show-proto-sidebar=1">Abrir no Figma</a></td>
-<td>✅ Concluído</td>
+<td>Definido pelo cliente</td>
+<td>Sim</td>
 </tr>
 <tr>
-<td>[Sistema Mobile]</td>
-<td><a href="https://www.figma.com/proto/Rmih83396wf3H6qCvkzieO/Prot%C3%B3tipo-TPPE?node-id=598-7967&amp;starting-point-node-id=598%3A7967&amp;show-proto-sidebar=1&amp;t=hwQ3xfXEkNSEq7u0-1">Abrir no Figma</a></td>
-<td>✅ Concluído</td>
+<td>Status</td>
+<td>Não planejada</td>
+</tr>
+<tr>
+<td>Depende de</td>
+<td><a href="../us04/">US04</a></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="fluxos">Fluxos<a class="headerlink" href="#fluxos" title="Permanent link">&para;</a></h2>
-<h3 id="landing-page-web-landing-page-mobile">[Landing Page Web / Landing Page Mobile]<a class="headerlink" href="#landing-page-web-landing-page-mobile" title="Permanent link">&para;</a></h3>
-<p>Essa é a Landing Page, onde será possível que usuários acessem informações sobre o escritório e o cliente, seus diferenciais, áreas de atuação, artigos e formas de entrar em contato. Possui uma tela principal contendo a barra de navegação onde o usuário pode acessar facilmente diferentes tópicos.</p>
-<p><strong>Telas:</strong> Tela Landing Page </p>
-<hr />
-<h3 id="sistema-web-sistema-mobile">[Sistema Web/ Sistema Mobile]<a class="headerlink" href="#sistema-web-sistema-mobile" title="Permanent link">&para;</a></h3>
-<p>Essa é o Sistema que se inicia na aba usuários, que mostra um painel de gerenciamento de usuários. Na barra de navegação, é possível acessar ferramentas para edição da Landing Page e as telas de Artigos, Leads, Clientes, Agenda, Processos, Tarefas e painel de Notificações. Mais detalhes podem ser encontrados dentro do protótipo no link listado acima. </p>
-<blockquote>
-<p>Obs: O protótipo do sistema mobile se inicia na área de login e acessa o sistema descrito acima ao clicar no botão 'Entrar'. </p>
-</blockquote>
-<p><strong>Telas:</strong> </p>
-<div class="highlight"><pre><span></span><code>- Tela Usuários → Tela Novo Usuário → Tela Registros
-- Tela Edição Landing Page 
-- Tela Artigos → Tela Novo Artigo
-- Tela Leads → Tela Informações Lead 
-- Tela Clientes → Tela Adicionar Cliente 
-- Tela Agenda
-        → Tela Calcular Prazo 
-        → Tela Novo Compromisso
-- Tela Processos
-        → Tela Novo Processo
-        → Tela Abrir Ficha do Processo
-- Tela Tarefas
-        → Tela Nova Tarefa
-        → Tela Edição de Tarefa
-- Tela Notificações
-</code></pre></div>
-<hr />
-<h3 id="login-web">[Login Web]<a class="headerlink" href="#login-web" title="Permanent link">&para;</a></h3>
-<p>Tela que representa o ambiente de login, acessado quando o usuário quiser entrar na página de Sistema. No protótipo, o sistema é acessado ao acionar o botão 'Entrar'.</p>
-<p><strong>Telas:</strong> Tela Login</p>
-<hr />
+<h2 id="historia-de-usuario">História de Usuário<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
+<p>Como membro da equipe, quero que os documentos anexados aos processos sejam
+armazenados no Google Drive do escritório para acessá-los também pelo Drive,
+organizados por processo.</p>
+<h2 id="tarefas">Tarefas<a class="headerlink" href="#tarefas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Definir com o cliente a conta do Drive utilizada (Google Workspace ou conta Gmail do escritório);</li>
+<li>Configurar a conta do escritório para o sistema (conta de serviço com Drive compartilhado ou conexão OAuth feita pelo administrador);</li>
+<li>Implementar o armazenamento de documentos no Google Drive;</li>
+<li>Criar automaticamente uma pasta para cada processo no Drive;</li>
+<li>Permitir o download dos documentos armazenados no Drive pelo sistema;</li>
+<li>Permitir escolher entre armazenamento local e Google Drive por configuração;</li>
+<li>Registrar falhas de comunicação com o Google Drive nos logs de integração;</li>
+<li>Notificar os administradores em caso de falha na integração.</li>
+</ul>
+<h2 id="criterios-de-aceitacao">Critérios de Aceitação<a class="headerlink" href="#criterios-de-aceitacao" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Os documentos enviados pelo sistema devem ser armazenados no Google Drive do escritório;</li>
+<li>Cada documento deve ficar na pasta do processo ao qual foi anexado;</li>
+<li>Os documentos devem continuar sendo listados e baixados pela página do processo;</li>
+<li>O acesso aos documentos pelo sistema deve continuar respeitando as permissões do usuário;</li>
+<li>Os documentos não devem ser compartilhados por link público;</li>
+<li>Em caso de falha do Google Drive, o usuário deve receber uma mensagem de erro e a falha deve ser registrada;</li>
+<li>O sistema deve continuar funcionando com armazenamento local quando a integração estiver desativada.</li>
+</ul>
 <h2 id="observacoes">Observações<a class="headerlink" href="#observacoes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Protótipos feitos no Figma e inspirados na identidade visual do cliente. Caso queira mais informações, entrar em contato com um dos colaboradores.</li>
+<li>A <a href="../us04/">US04</a> entrega a gestão de documentos com armazenamento local. Esta história
+  troca apenas o local de armazenamento, mantendo no banco de dados a associação dos
+  documentos aos processos e as permissões de acesso.</li>
+<li>O acesso ao Drive deve usar o escopo <code>drive.file</code>, que limita o sistema aos arquivos
+  criados por ele.</li>
+<li>Anexar arquivos já existentes no Drive (Google Picker) não faz parte desta história.</li>
 </ul>
-<hr />
-<p><em>Última atualização: 19/05/2026</em></p>
 
 
 
@@ -1455,10 +1424,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
