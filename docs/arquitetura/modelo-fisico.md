@@ -15,6 +15,7 @@ erDiagram
         varchar email UK
         varchar hashed_password
         enum role
+        boolean can_view_payments
         boolean is_active
         int created_by FK
         int updated_by FK
@@ -192,6 +193,7 @@ erDiagram
 | `email` | varchar(255) | not null, unique, index |
 | `hashed_password` | varchar(255) | not null |
 | `role` | enum `ADMIN`/`USER` | not null, default `USER` |
+| `can_view_payments` | boolean | not null, default `false`; permite ao funcionário (`USER`) visualizar vencimentos |
 | `is_active` | boolean | not null, default `true` |
 | `created_by` | integer | FK `users.id`, nullable |
 | `updated_by` | integer | FK `users.id`, nullable |

@@ -65,7 +65,7 @@ Esta matriz compara o backlog planejado com o estado atual do código. A avalia�
 2. O modelo físico está documentado e versionado em migration inicial; futuras alterações de schema devem manter o DER e as migrations sincronizados.
 3. A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias, notificação administrativa de falhas e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.
 4. O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.
-5. RBAC precisa ser refinado para os papéis reais do backlog.
+5. RBAC precisa ser refinado para os papéis reais do backlog. Já existe a permissão específica por usuário `can_view_payments`, que controla a visualização de vencimentos pelo funcionário (`USER`); administradores sempre têm acesso e são os únicos que podem cadastrar, alterar ou excluir vencimentos.
 
 ## Próximos Passos Sugeridos
 
