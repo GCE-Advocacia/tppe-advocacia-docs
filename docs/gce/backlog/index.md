@@ -24,6 +24,7 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US07](./us07.md) | Troca de cores da Landing Page | Permitir alterar as cores da Landing Page pela área administrativa | [Sprint 1](../sprint-01.md) | Sim |
 | [US08](./us08.md) | Troca da logo | Permitir alterar a logo da Landing Page pela área administrativa | Backlog | Sim |
 | [US09](./us09.md) | Armazenamento no Google Drive | Armazenar os documentos dos processos no Google Drive do escritório | Backlog | Sim |
+| [US11](./us11.md) | Permissão de visualização de vencimentos | Permitir ou negar a visualização de vencimentos para cada funcionário | [Sprint 2](../sprint-02.md) | A definir |
 
 ## Subgrupos
 
