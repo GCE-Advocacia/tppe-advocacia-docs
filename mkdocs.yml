@@ -67,6 +67,7 @@ nav:
       - US08 - Troca da logo: gce/backlog/us08.md
       - US09 - Armazenamento no Google Drive: gce/backlog/us09.md
     - Sprint 1: gce/sprint-01.md
+    - Sprint 2: gce/sprint-02.md
   - Backlog:
     - Visão Geral: backlog/index.md
     - Status da Implementação: backlog/status.md
