@@ -1603,7 +1603,7 @@
 <li>O modelo físico está documentado e versionado em migration inicial; futuras alterações de schema devem manter o DER e as migrations sincronizados.</li>
 <li>A integração externa jurídica existe via DataJud, possui seleção de tribunal por processo, retentativa para falhas temporárias, notificação administrativa de falhas e já expõe comando agendável; ainda falta configurar o cron/scheduler no ambiente de deploy.</li>
 <li>O frontend não acompanha a amplitude do backend; a maior parte das funcionalidades está disponível apenas via API.</li>
-<li>RBAC precisa ser refinado para os papéis reais do backlog.</li>
+<li>RBAC precisa ser refinado para os papéis reais do backlog. Já existe a permissão específica por usuário <code>can_view_payments</code>, que controla a visualização de vencimentos pelo funcionário (<code>USER</code>); administradores sempre têm acesso e são os únicos que podem cadastrar, alterar ou excluir vencimentos.</li>
 </ol>
 <h2 id="proximos-passos-sugeridos">Próximos Passos Sugeridos<a class="headerlink" href="#proximos-passos-sugeridos" title="Permanent link">&para;</a></h2>
 <ol>
