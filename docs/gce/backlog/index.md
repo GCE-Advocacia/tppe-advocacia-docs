@@ -22,9 +22,11 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US05](./us05.md) | Criação e Atribuição de Tarefas do Processo | Permitir criar tarefas nos processos e atribuí-las a membros da equipe | [Sprint 1](../sprint-01.md) | Sim |
 | [US06](./us06.md) | Troca de imagens da Landing Page | Permitir alterar as imagens da Landing Page pela área administrativa | Backlog | Sim |
 | [US07](./us07.md) | Troca de cores da Landing Page | Permitir alterar as cores da Landing Page pela área administrativa | [Sprint 1](../sprint-01.md) | Sim |
-| [US08](./us08.md) | Troca da logo | Permitir alterar a logo da Landing Page pela área administrativa | Backlog | Sim |
+| [US08](./us08.md) | Troca da logo | Permitir alterar a logo da Landing Page pela área administrativa | [Sprint 2](../sprint-02.md) | Sim |
 | [US09](./us09.md) | Armazenamento no Google Drive | Armazenar os documentos dos processos no Google Drive do escritório | Backlog | Sim |
+| [US10](./us10.md) | Temas da Landing page | Permitir selecionar e criar diversos temas para a Landing Page | [Sprint 2](../sprint-02.md) | A definir |
 | [US11](./us11.md) | Permissão de visualização de vencimentos | Permitir ou negar a visualização de vencimentos para cada funcionário | [Sprint 2](../sprint-02.md) | A definir |
+| [US12](./us12.md) | Preview da Landing Page | Permitir a visualizaçao da landing page atraves de um Preview | [Sprint 2](../sprint-02.md) | A definir |
 
 ## Subgrupos
 
