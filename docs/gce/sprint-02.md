@@ -9,7 +9,7 @@
 | Anne / Matheus / Pablo | 1 | [US02](./backlog/us01.md) | Lembretes de pagamento e alertas automáticos |
 | Artur / Bessa / Isabelle | 1 | [US04](./backlog/us04.md) | Gestão de documentos |
 | Guilherme / José / Lucas | 1 | [US11](./backlog/us11.md) | Permissão de visualização de vencimentos |
-| Gabriel / Fabio / Daniel | 3 | [US08](./backlog/us08.md) , [US10](./backlog/us10.md) , [US12](./backlog/us11.md) | Alteraçao da Logo, Preview Landing Page, Seleçao de Temas |
+| Gabriel / Fabio / Daniel | 3 | [US08](./backlog/us08.md) , [US10](./backlog/us10.md) , [US12](./backlog/us12.md) | Alteraçao da Logo, Preview Landing Page, Seleçao de Temas |
 
 ---
 
