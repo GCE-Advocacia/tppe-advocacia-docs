@@ -1455,12 +1455,16 @@ online sem depender da máquina de um membro do grupo.</p>
 <ul>
 <li>Criar o banco PostgreSQL no Neon e aplicar as migrações do Alembic;</li>
 <li>Migrar os dados do banco de produção atual para o Neon;</li>
-<li>Publicar a API no Render a partir do Dockerfile do backend;</li>
+<li>Publicar a API no Render a partir do Dockerfile do backend, com 1 worker do gunicorn;</li>
 <li>Publicar o frontend no Netlify apontando para a URL da API no Render;</li>
 <li>Configurar as variáveis de ambiente (secrets) no Render e no Netlify;</li>
 <li>Configurar o CORS da API para o domínio do Netlify;</li>
-<li>Substituir o serviço de scheduler por um workflow agendado do GitHub Actions que chama um endpoint protegido da API;</li>
+<li>Criar um workflow agendado do GitHub Actions que acessa <code>/api/v1/health</code> para manter a API ativa;</li>
+<li>Executar o agendador de notificações dentro da API, substituindo o serviço <code>scheduler</code> separado;</li>
+<li>Configurar o agendador para o fuso horário <code>America/Sao_Paulo</code>;</li>
+<li>Armazenar as imagens da Landing Page e as logos no Supabase Storage;</li>
 <li>Armazenar os documentos no Google Drive (<a href="../us09/">US09</a>), já que o disco do Render é temporário;</li>
+<li>Verificar no Resend o domínio de envio dos e-mails de notificação;</li>
 <li>Configurar o deploy automático do frontend e da API a partir da branch <code>main</code>;</li>
 <li>Atualizar a documentação de deploy.</li>
 </ul>
@@ -1470,7 +1474,7 @@ online sem depender da máquina de um membro do grupo.</p>
 <li>A API deve estar acessível por HTTPS no Render e responder em <code>/api/v1/health</code>;</li>
 <li>O banco de dados no Neon deve aceitar apenas conexões autenticadas e com SSL;</li>
 <li>As notificações de vencimento devem continuar sendo enviadas nos horários previstos;</li>
-<li>Os documentos anexados não devem ser perdidos após reinício ou novo deploy da API;</li>
+<li>Os documentos anexados, as imagens da Landing Page e as logos não devem ser perdidos após reinício ou novo deploy da API;</li>
 <li>Nenhum dos serviços utilizados deve gerar custo;</li>
 <li>O sistema não deve depender da máquina de nenhum membro do grupo;</li>
 <li>As credenciais de administrador devem permitir o acesso ao painel.</li>
@@ -1480,9 +1484,12 @@ online sem depender da máquina de um membro do grupo.</p>
 <li>A <a href="../us20/">US20</a> fez o deploy em uma máquina de um membro do grupo. Esta história
   move o sistema para serviços de nuvem gratuitos, por pedido do professor.</li>
 <li>No plano gratuito do Render, a API hiberna após cerca de 15 minutos sem acesso, e a
-  primeira requisição seguinte pode levar até 1 minuto.</li>
-<li>O plano gratuito do Render não oferece workers em segundo plano nem disco persistente,
-  por isso o agendamento passa para o GitHub Actions e os documentos para o Google Drive.</li>
+  primeira requisição seguinte pode levar até 1 minuto. O workflow do GitHub Actions
+  evita a hibernação, mas os agendamentos do Actions podem atrasar em horários de pico.</li>
+<li>O plano gratuito do Render tem 512 MB de RAM e não oferece workers em segundo plano,
+  por isso a API roda com 1 worker e o agendador passa a rodar dentro dela.</li>
+<li>O disco do Render é apagado a cada deploy ou reinício, por isso as imagens vão para o
+  Supabase Storage e os documentos para o Google Drive.</li>
 <li>Os limites dos planos gratuitos devem ser conferidos na hora da configuração.</li>
 </ul>
 
