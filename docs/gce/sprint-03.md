@@ -8,8 +8,8 @@
 |---|---:|---|---|
 | Anne / Pablo / Matheus | - | A definir | A definir |
 | Guilherme / José / Lucas | - | A definir | A definir |
-| Artur / Bessa / Isabelle | 1 | [US19](https://github.com/GCE-Advocacia/.github/issues/22) | Armazenamento de documentos no Google Drive |
-| Gabriel / Fabio / Daniel | 3 | [US13](https://github.com/GCE-Advocacia/.github/issues/14), [US14](https://github.com/GCE-Advocacia/.github/issues/17), [US15](https://github.com/GCE-Advocacia/.github/issues/18) | Reestruturação da seção de Landing Page, Sincronização dos temas com o sistema e o login, Preset de tema e logos do novo escritório |
+| Artur / Bessa / Isabelle | 2 | [US09](./backlog/us09.md), [US21](./backlog/us21.md) | Armazenamento de documentos no Google Drive, Migração da hospedagem para nuvem gratuita |
+  | Gabriel / Fabio / Daniel | 3 | [US13](https://github.com/GCE-Advocacia/.github/issues/14), [US14](https://github.com/GCE-Advocacia/.github/issues/17), [US15](https://github.com/GCE-Advocacia/.github/issues/18) | Reestruturação da seção de Landing Page, Sincronização dos temas com o sistema e o login, Preset de tema e logos do novo escritório |
 
 ---
 
@@ -17,7 +17,8 @@
 
 | US | Assunto | Responsáveis | Status | PR/Commits |
 |---|---|---|---|---|
-| [US19](https://github.com/GCE-Advocacia/.github/issues/22) | Armazenamento de documentos no Google Drive | Artur, Bessa, Isabelle | Em andamento | - |
+| [US09](./backlog/us09.md) | Armazenamento de documentos no Google Drive | Artur, Bessa, Isabelle | Em andamento | - |
+| [US21](./backlog/us21.md) | Migração da hospedagem para nuvem gratuita | Artur, Bessa, Isabelle | Em andamento | - |
 | [US13](https://github.com/GCE-Advocacia/.github/issues/14) | Reestruturação da Seção de Landing Page e Decomposição Modular | Gabriel, Fabio, Daniel | Em andamento | [PR Frontend #18](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/18) |
 | [US13.1](https://github.com/GCE-Advocacia/.github/issues/15) | Reestruturação da Navegação, Rotas, Abas e Testes E2E | Gabriel, Fabio, Daniel | Em andamento | [PR Frontend #18](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/18) |
 | [US13.2](https://github.com/GCE-Advocacia/.github/issues/16) | Decomposição Modular orientada a SRP | Gabriel, Fabio, Daniel | Concluído | [PR Frontend #17](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/17) |
@@ -29,7 +30,7 @@
 ## Resumo
 
 - *Líder da Apresentação*: A definir
-- *Total de US concluídas:* 0 de 4
+- *Total de US concluídas:* 0 de 5
 - *US em revisão:* 0
 - *Início da Sprint:* 12/10/2026
 - *Fim da Sprint:* 26/10/2026
