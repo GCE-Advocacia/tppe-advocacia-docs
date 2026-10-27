@@ -1439,7 +1439,7 @@
 </tr>
 <tr>
 <td>Status</td>
-<td>Concluído</td>
+<td>Em andamento</td>
 </tr>
 <tr>
 <td>Depende de</td>
@@ -1453,17 +1453,20 @@ dados e arquivos) em serviços de nuvem gratuitos para que ele fique disponível
 online sem depender da máquina de um membro do grupo.</p>
 <h2 id="tarefas">Tarefas<a class="headerlink" href="#tarefas" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Criar o banco PostgreSQL no Neon e aplicar as migrações do Alembic;</li>
+<li>Criar o banco PostgreSQL no Neon e aplicar as migrações do Alembic pela conexão direta (sem o pooler), com <code>sslmode=require</code>;</li>
 <li>Migrar os dados do banco de produção atual para o Neon;</li>
-<li>Publicar a API no Render a partir do Dockerfile do backend, com 1 worker do gunicorn;</li>
+<li>Publicar a API no Render a partir do Dockerfile do backend, com 1 worker do gunicorn e <code>SCHEDULER_ENABLED=false</code>;</li>
 <li>Publicar o frontend no Netlify apontando para a URL da API no Render;</li>
-<li>Configurar as variáveis de ambiente (secrets) no Render e no Netlify;</li>
+<li>Configurar as variáveis de ambiente (secrets) no Render, no Netlify e no GitHub Actions;</li>
 <li>Configurar o CORS da API para o domínio do Netlify;</li>
-<li>Criar um workflow agendado do GitHub Actions que acessa <code>/api/v1/health</code> para manter a API ativa;</li>
-<li>Executar o agendador de notificações dentro da API, substituindo o serviço <code>scheduler</code> separado;</li>
-<li>Configurar o agendador para o fuso horário <code>America/Sao_Paulo</code>;</li>
-<li>Armazenar as imagens da Landing Page e as logos no Supabase Storage;</li>
-<li>Armazenar os documentos no Google Drive (<a href="../us09/">US09</a>), já que o disco do Render é temporário;</li>
+<li>Criar na API um endpoint protegido por token que executa os envios de notificações de vencimento;</li>
+<li>Tornar o envio de notificações idempotente, para que o mesmo e-mail não seja enviado duas vezes no mesmo dia;</li>
+<li>Criar um workflow agendado do GitHub Actions que chama o endpoint de notificações diariamente;</li>
+<li>Calcular as datas de vencimento no fuso horário <code>America/Sao_Paulo</code>, e não no fuso do servidor (UTC);</li>
+<li>Criar um workflow agendado do GitHub Actions que acessa <code>/api/v1/health</code> para reduzir a hibernação da API;</li>
+<li>Armazenar as imagens da Landing Page e as logos no banco do Neon, redimensionando e comprimindo as imagens no upload;</li>
+<li>Servir as imagens com cabeçalhos de cache (<code>Cache-Control</code> e <code>ETag</code>);</li>
+<li>Armazenar os documentos no Google Drive do escritório (<a href="../us09/">US09</a>) usando OAuth da conta do escritório, já que o disco do Render é temporário;</li>
 <li>Verificar no Resend o domínio de envio dos e-mails de notificação;</li>
 <li>Configurar o deploy automático do frontend e da API a partir da branch <code>main</code>;</li>
 <li>Atualizar a documentação de deploy.</li>
@@ -1473,7 +1476,8 @@ online sem depender da máquina de um membro do grupo.</p>
 <li>O frontend deve estar acessível publicamente por HTTPS no Netlify;</li>
 <li>A API deve estar acessível por HTTPS no Render e responder em <code>/api/v1/health</code>;</li>
 <li>O banco de dados no Neon deve aceitar apenas conexões autenticadas e com SSL;</li>
-<li>As notificações de vencimento devem continuar sendo enviadas nos horários previstos;</li>
+<li>As notificações de vencimento devem ser enviadas uma única vez no dia previsto, mesmo que a API esteja hibernando;</li>
+<li>O endpoint de notificações deve recusar requisições sem o token correto;</li>
 <li>Os documentos anexados, as imagens da Landing Page e as logos não devem ser perdidos após reinício ou novo deploy da API;</li>
 <li>Nenhum dos serviços utilizados deve gerar custo;</li>
 <li>O sistema não deve depender da máquina de nenhum membro do grupo;</li>
@@ -1484,12 +1488,26 @@ online sem depender da máquina de um membro do grupo.</p>
 <li>A <a href="../us20/">US20</a> fez o deploy em uma máquina de um membro do grupo. Esta história
   move o sistema para serviços de nuvem gratuitos, por pedido do professor.</li>
 <li>No plano gratuito do Render, a API hiberna após cerca de 15 minutos sem acesso, e a
-  primeira requisição seguinte pode levar até 1 minuto. O workflow do GitHub Actions
-  evita a hibernação, mas os agendamentos do Actions podem atrasar em horários de pico.</li>
+  primeira requisição seguinte pode levar até 1 minuto. Os agendamentos do GitHub Actions
+  podem atrasar em horários de pico, por isso o workflow de health check não garante que a
+  API fique sempre ativa.</li>
+<li>Um agendador rodando dentro da API não executa enquanto ela hiberna. Por isso as
+  notificações são disparadas pelo GitHub Actions: a chamada acorda a API e executa o
+  envio, e um atraso do agendamento não impede o envio no mesmo dia.</li>
+<li>O cron do GitHub Actions usa UTC. Como o Brasil não tem horário de verão, 11:00 UTC
+  corresponde a 08:00 em <code>America/Sao_Paulo</code>.</li>
+<li>O GitHub desativa workflows agendados após 60 dias sem atividade no repositório. Se isso
+  acontecer, o workflow deve ser reativado na aba Actions.</li>
 <li>O plano gratuito do Render tem 512 MB de RAM e não oferece workers em segundo plano,
-  por isso a API roda com 1 worker e o agendador passa a rodar dentro dela.</li>
+  por isso a API roda com 1 worker e o serviço <code>scheduler</code> separado deixa de ser usado.</li>
 <li>O disco do Render é apagado a cada deploy ou reinício, por isso as imagens vão para o
-  Supabase Storage e os documentos para o Google Drive.</li>
+  banco do Neon e os documentos para o Google Drive.</li>
+<li>O plano gratuito do Neon oferece 1 GB de banco e 5 GB de transferência de saída por mês
+  por projeto. As imagens comprimidas ocupam poucos MB, e os cabeçalhos de cache evitam que
+  sejam baixadas de novo a cada visita.</li>
+<li>Contas de serviço do Google não têm cota de armazenamento no Drive, por isso os
+  documentos são enviados com OAuth da conta do escritório.</li>
+<li>Sem domínio verificado, o Resend só envia e-mails para o dono da conta.</li>
 <li>Os limites dos planos gratuitos devem ser conferidos na hora da configuração.</li>
 </ul>
 
