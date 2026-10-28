@@ -17,8 +17,8 @@
 
 | US | Assunto | Responsáveis | Status | PR/Commits |
 |---|---|---|---|---|
-| [US09](./backlog/us09.md) | Armazenamento de documentos no Google Drive | Artur, Bessa, Isabelle | Em andamento | - |
-| [US21](./backlog/us21.md) | Migração da hospedagem para nuvem gratuita | Artur, Bessa, Isabelle | Em andamento | - |
+| [US09](./backlog/us09.md) | Armazenamento de documentos no Google Drive | Artur, Bessa, Isabelle | Concluído | [PR Backend #22](https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/22), [PR Frontend #21](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/21), [PR Frontend #22](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/22) |
+| [US21](./backlog/us21.md) | Migração da hospedagem para nuvem gratuita | Artur, Bessa, Isabelle | Concluído | [PR Backend #19](https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/19), [#20](https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/20), [#23](https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/23), [#24](https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/24) |
 | [US13](https://github.com/GCE-Advocacia/.github/issues/14) | Reestruturação da Seção de Landing Page e Decomposição Modular | Gabriel, Fabio, Daniel | Em andamento | [PR Frontend #18](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/18) |
 | [US13.1](https://github.com/GCE-Advocacia/.github/issues/15) | Reestruturação da Navegação, Rotas, Abas e Testes E2E | Gabriel, Fabio, Daniel | Em andamento | [PR Frontend #18](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/18) |
 | [US13.2](https://github.com/GCE-Advocacia/.github/issues/16) | Decomposição Modular orientada a SRP | Gabriel, Fabio, Daniel | Concluído | [PR Frontend #17](https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/17) |
@@ -30,7 +30,7 @@
 ## Resumo
 
 - *Líder da Apresentação*: A definir
-- *Total de US concluídas:* 0 de 5
+- *Total de US concluídas:* 2 de 5
 - *US em revisão:* 0
 - *Início da Sprint:* 12/10/2026
 - *Fim da Sprint:* 26/10/2026
@@ -48,3 +48,4 @@ Nenhum vídeo adicionado ainda.
 | Versão | Data | Descrição | Autor(es) |
 |---|---|---|---|
 | `1.0` | 26/10/2026 | Criação do relatório da Sprint 3 | [Artur] |
+| `1.1` | 28/10/2026 | Conclusão da US09 e da US21 | [Artur] |
