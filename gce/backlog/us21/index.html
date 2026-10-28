@@ -1452,32 +1452,74 @@
 dados e arquivos) em serviços de nuvem gratuitos para que ele fique disponível
 online sem depender da máquina de um membro do grupo.</p>
 <h2 id="tarefas">Tarefas<a class="headerlink" href="#tarefas" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Criar o banco PostgreSQL no Neon e aplicar as migrações do Alembic pela conexão direta (sem o pooler), com <code>sslmode=require</code>;</li>
-<li>Migrar os dados do banco de produção atual para o Neon;</li>
-<li>Publicar a API no Render a partir do Dockerfile do backend, com 1 worker do gunicorn e <code>SCHEDULER_ENABLED=false</code>;</li>
-<li>Publicar o frontend no Netlify apontando para a URL da API no Render;</li>
-<li>Configurar as variáveis de ambiente (secrets) no Render, no Netlify e no GitHub Actions;</li>
-<li>Configurar o CORS da API para o domínio do Netlify;</li>
-<li>Criar na API um endpoint protegido por token que executa os envios de notificações de vencimento;</li>
-<li>Tornar o envio de notificações idempotente, para que o mesmo e-mail não seja enviado duas vezes no mesmo dia;</li>
-<li>Criar um workflow agendado do GitHub Actions que chama o endpoint de notificações diariamente;</li>
-<li>Calcular as datas de vencimento no fuso horário <code>America/Sao_Paulo</code>, e não no fuso do servidor (UTC);</li>
-<li>Criar um workflow agendado do GitHub Actions que acessa <code>/api/v1/health</code> para reduzir a hibernação da API;</li>
-<li>Armazenar as imagens da Landing Page, as capas dos artigos e as logos em um bucket público do Neon Object Storage, redimensionando e comprimindo as imagens no upload;</li>
-<li>Gravar as imagens com cabeçalho de cache (<code>Cache-Control</code>), já que cada upload gera um nome novo;</li>
-<li>Armazenar os documentos no Google Drive do escritório (<a href="../us09/">US09</a>) usando OAuth da conta do escritório, já que o disco do Render é temporário;</li>
-<li>Verificar no Resend o domínio de envio dos e-mails de notificação;</li>
-<li>Configurar o deploy automático do frontend e da API a partir da branch <code>main</code>;</li>
-<li>Atualizar a documentação de deploy.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criar o banco PostgreSQL no Neon e aplicar as migrações do Alembic pela conexão direta (sem o pooler), com SSL</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Publicar a API no Render a partir do Dockerfile do backend, com 1 worker do gunicorn e o agendador rodando dentro da API (<code>SCHEDULER_ENABLED=true</code>)</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Publicar o frontend no Netlify apontando para a URL da API no Render</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Configurar as variáveis de ambiente (secrets) no Render e no Netlify</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Configurar o CORS da API para o domínio do Netlify</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Executar os alertas de vencimento às 06:00 de <code>America/Sao_Paulo</code> (<code>DEADLINE_ALERT_CRON=09:00</code>, já que o servidor usa UTC)</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Criar um workflow agendado do GitHub Actions que acessa <code>/api/v1/health</code> a cada 10 minutos para manter a API ativa</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Armazenar as imagens da Landing Page, as capas dos artigos e as logos em um bucket público do Neon Object Storage, redimensionando e comprimindo as imagens no upload</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Gravar as imagens com cabeçalho de cache (<code>Cache-Control</code>), já que cada upload gera um nome novo</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Armazenar os documentos no Google Drive do escritório (<a href="../us09/">US09</a>) usando OAuth da conta do escritório, já que o disco do Render é temporário</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Configurar o deploy automático do frontend e da API a partir da branch <code>main</code></td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Atualizar a documentação de deploy (<code>DEPLOY.md</code> do backend)</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Verificar no Resend o domínio de envio dos e-mails de notificação</td>
+<td>Pendente (depende do domínio do escritório)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="criterios-de-aceitacao">Critérios de Aceitação<a class="headerlink" href="#criterios-de-aceitacao" title="Permanent link">&para;</a></h2>
 <ul>
 <li>O frontend deve estar acessível publicamente por HTTPS no Netlify;</li>
 <li>A API deve estar acessível por HTTPS no Render e responder em <code>/api/v1/health</code>;</li>
 <li>O banco de dados no Neon deve aceitar apenas conexões autenticadas e com SSL;</li>
-<li>As notificações de vencimento devem ser enviadas uma única vez no dia previsto, mesmo que a API esteja hibernando;</li>
-<li>O endpoint de notificações deve recusar requisições sem o token correto;</li>
+<li>As notificações de vencimento devem continuar sendo enviadas nos horários previstos;</li>
 <li>Os documentos anexados, as imagens da Landing Page e as logos não devem ser perdidos após reinício ou novo deploy da API;</li>
 <li>Nenhum dos serviços utilizados deve gerar custo;</li>
 <li>O sistema não deve depender da máquina de nenhum membro do grupo;</li>
@@ -1488,18 +1530,22 @@ online sem depender da máquina de um membro do grupo.</p>
 <li>A <a href="../us20/">US20</a> fez o deploy em uma máquina de um membro do grupo. Esta história
   move o sistema para serviços de nuvem gratuitos, por pedido do professor.</li>
 <li>No plano gratuito do Render, a API hiberna após cerca de 15 minutos sem acesso, e a
-  primeira requisição seguinte pode levar até 1 minuto. Os agendamentos do GitHub Actions
-  podem atrasar em horários de pico, por isso o workflow de health check não garante que a
-  API fique sempre ativa.</li>
-<li>Um agendador rodando dentro da API não executa enquanto ela hiberna. Por isso as
-  notificações são disparadas pelo GitHub Actions: a chamada acorda a API e executa o
-  envio, e um atraso do agendamento não impede o envio no mesmo dia.</li>
-<li>O cron do GitHub Actions usa UTC. Como o Brasil não tem horário de verão, 11:00 UTC
-  corresponde a 08:00 em <code>America/Sao_Paulo</code>.</li>
+  primeira requisição seguinte pode levar até 1 minuto.</li>
+<li>O agendador (alertas de vencimento, lembretes de pagamento e sincronizações) roda dentro
+  da API e só executa enquanto ela está ativa. Por isso um workflow do GitHub Actions
+  acessa <code>/api/v1/health</code> a cada 10 minutos. A equipe avaliou disparar as notificações por
+  um endpoint protegido chamado pelo GitHub Actions e optou pelo keep alive, mais simples.</li>
+<li>Os agendamentos do GitHub Actions podem atrasar em horários de pico, então a API ainda
+  pode hibernar de vez em quando. Uma tarefa diária que coincidir com esse intervalo não é
+  executada naquele dia.</li>
 <li>O GitHub desativa workflows agendados após 60 dias sem atividade no repositório. Se isso
   acontecer, o workflow deve ser reativado na aba Actions.</li>
-<li>O plano gratuito do Render tem 512 MB de RAM e não oferece workers em segundo plano,
-  por isso a API roda com 1 worker e o serviço <code>scheduler</code> separado deixa de ser usado.</li>
+<li>O plano gratuito do Render tem 512 MB de RAM, não oferece workers em segundo plano e
+  inclui 750 horas por mês. Por isso a API roda com 1 worker, o agendador roda dentro dela
+  (sem envio duplicado) e o serviço <code>scheduler</code> separado deixa de ser usado. Ela deve ser
+  o único serviço gratuito na conta do Render.</li>
+<li>O servidor do Render usa UTC. Como o Brasil não tem horário de verão, 09:00 UTC
+  corresponde a 06:00 em <code>America/Sao_Paulo</code>.</li>
 <li>O disco do Render é apagado a cada deploy ou reinício, por isso as imagens vão para o
   Object Storage do Neon e os documentos para o Google Drive. O navegador lê as imagens
   direto do bucket, sem passar pela API.</li>
