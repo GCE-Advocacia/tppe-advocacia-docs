@@ -1452,16 +1452,48 @@
 armazenados no Google Drive do escritório para acessá-los também pelo Drive,
 organizados por processo.</p>
 <h2 id="tarefas">Tarefas<a class="headerlink" href="#tarefas" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Definir com o cliente a conta do Drive utilizada (Google Workspace ou conta Gmail do escritório);</li>
-<li>Configurar a conta do escritório para o sistema (conta de serviço com Drive compartilhado ou conexão OAuth feita pelo administrador);</li>
-<li>Implementar o armazenamento de documentos no Google Drive;</li>
-<li>Criar automaticamente uma pasta para cada processo no Drive;</li>
-<li>Permitir o download dos documentos armazenados no Drive pelo sistema;</li>
-<li>Permitir escolher entre armazenamento local e Google Drive por configuração;</li>
-<li>Registrar falhas de comunicação com o Google Drive nos logs de integração;</li>
-<li>Notificar os administradores em caso de falha na integração.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definir com o cliente a conta do Drive utilizada (conta Google do escritório)</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Configurar a conexão OAuth da conta do escritório, feita pelo administrador na página de Processos (escopo <code>drive.file</code>)</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Implementar o armazenamento de documentos no Google Drive</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Criar automaticamente uma pasta para cada processo no Drive, nomeada pelo número do processo, dentro de <code>Sistema Advocacia — Documentos</code></td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Permitir o download dos documentos armazenados no Drive pelo sistema</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Permitir escolher entre armazenamento local e Google Drive por configuração (<code>DOCUMENT_STORAGE</code>; em produção, só Drive)</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Registrar falhas de comunicação com o Google Drive nos logs de integração</td>
+<td>Concluída</td>
+</tr>
+<tr>
+<td>Notificar os administradores em caso de falha na integração</td>
+<td>Concluída</td>
+</tr>
+</tbody>
+</table>
 <h2 id="criterios-de-aceitacao">Critérios de Aceitação<a class="headerlink" href="#criterios-de-aceitacao" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Os documentos enviados pelo sistema devem ser armazenados no Google Drive do escritório;</li>
@@ -1480,6 +1512,14 @@ organizados por processo.</p>
 <li>O acesso ao Drive deve usar o escopo <code>drive.file</code>, que limita o sistema aos arquivos
   criados por ele.</li>
 <li>Anexar arquivos já existentes no Drive (Google Picker) não faz parte desta história.</li>
+<li>A conexão é única para o escritório. Contas de serviço do Google não têm cota de
+  armazenamento no Drive, por isso o acesso usa OAuth da conta do escritório.</li>
+<li>Excluir um documento no sistema manda o arquivo para a lixeira do Drive, onde fica por
+  30 dias. Com o Drive desconectado, o sistema recusa enviar, baixar ou excluir documentos
+  e pede para conectar.</li>
+<li>Implementação: <a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/22">PR Backend #22</a>,
+  <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/21">PR Frontend #21</a> e
+  <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/22">PR Frontend #22</a>.</li>
 </ul>
 
 
