@@ -28,6 +28,7 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US11](./us11.md) | Permissão de visualização de vencimentos | Permitir ou negar a visualização de vencimentos para cada funcionário | [Sprint 2](../sprint-02.md) | A definir |
 | [US12](./us12.md) | Preview da Landing Page | Permitir a visualizaçao da landing page atraves de um Preview | [Sprint 2](../sprint-02.md) | A definir |
 | [US21](./us21.md) | Migração da hospedagem para nuvem gratuita | Hospedar o sistema em serviços de nuvem gratuitos (Netlify, Render e Neon) | [Sprint 3](../sprint-03.md) | Não |
+| [US22](./us22.md) | Permissões de acesso por aba | Permitir escolher, para cada funcionário, quais abas do sistema ele pode acessar | [Sprint 3](../sprint-03.md) | Sim |
 
 ## Subgrupos
 

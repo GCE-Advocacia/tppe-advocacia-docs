@@ -68,6 +68,7 @@ nav:
       - US09 - Armazenamento no Google Drive: gce/backlog/us09.md
       - US11 - Permissão de visualização de vencimentos: gce/backlog/us11.md
       - US21 - Migração para nuvem gratuita: gce/backlog/us21.md
+      - US22 - Permissões de acesso por aba: gce/backlog/us22.md
     - Sprint 1: gce/sprint-01.md
     - Sprint 2: gce/sprint-02.md
     - Sprint 3: gce/sprint-03.md
