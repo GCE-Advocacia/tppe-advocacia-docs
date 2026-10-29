@@ -29,6 +29,9 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US12](./us12.md) | Preview da Landing Page | Permitir a visualizaçao da landing page atraves de um Preview | [Sprint 2](../sprint-02.md) | A definir |
 | [US21](./us21.md) | Migração da hospedagem para nuvem gratuita | Hospedar o sistema em serviços de nuvem gratuitos (Netlify, Render e Neon) | [Sprint 3](../sprint-03.md) | Não |
 | [US22](./us22.md) | Permissões de acesso por aba | Permitir escolher, para cada funcionário, quais abas do sistema ele pode acessar | [Sprint 3](../sprint-03.md) | Sim |
+| [US23](./us23.md) | Envio de e-mail confiável e rastreável | Enviar os e-mails por SMTP com reserva, fila, novas tentativas e histórico de cada envio | [Sprint 3](../sprint-03.md) | Sim |
+| [US24](./us24.md) | Gestão do e-mail pelo admin | Configurar o envio pela tela, e-mails com a marca do escritório e convite de funcionário por link | [Sprint 3](../sprint-03.md) | Não |
+| [US25](./us25.md) | E-mail do escritório simples | Definir nome e responder para dos e-mails e ver se eles estão chegando, sem campos técnicos | [Sprint 3](../sprint-03.md) | Não |
 
 ## Subgrupos
 
