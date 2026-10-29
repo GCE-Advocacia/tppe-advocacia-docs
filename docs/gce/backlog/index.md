@@ -27,6 +27,11 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US10](./us10.md) | Temas da Landing page | Permitir selecionar e criar diversos temas para a Landing Page | [Sprint 2](../sprint-02.md) | A definir |
 | [US11](./us11.md) | Permissão de visualização de vencimentos | Permitir ou negar a visualização de vencimentos para cada funcionário | [Sprint 2](../sprint-02.md) | A definir |
 | [US12](./us12.md) | Preview da Landing Page | Permitir a visualizaçao da landing page atraves de um Preview | [Sprint 2](../sprint-02.md) | A definir |
+| [US13](./us13.md) | Reestruturação da seção de Landing Page | Reestruturar a seção de Personalização em abas e decompor o módulo em componentes e hooks | [Sprint 3](../sprint-03.md) | Não |
+| [US14](./us14.md) | Sincronização dos temas com o sistema e o login | Aplicar as cores de identidade visual do tema ativo no painel interno e na tela de login | [Sprint 3](../sprint-03.md) | Não |
+| [US15](./us15.md) | Preset de tema e logos do novo escritório | Cadastrar o preset de cores e as logos oficiais da nova banca parceira na galeria de temas | [Sprint 3](../sprint-03.md) | Sim |
+| [US16](./us16.md) | Customizador de curvatura dos botões | Permitir configurar o arredondamento dos botões por presets rápidos ou valor customizado | [Sprint 3](../sprint-03.md) | Não |
+| [US17](./us17.md) | Preview multi-dispositivo (Desktop, Tablet e Mobile) | Alternar a prévia entre Desktop, Tablet e Mobile na Landing Page e visualizar o Painel do Sistema | [Sprint 3](../sprint-03.md) | Não |
 | [US21](./us21.md) | Migração da hospedagem para nuvem gratuita | Hospedar o sistema em serviços de nuvem gratuitos (Netlify, Render e Neon) | [Sprint 3](../sprint-03.md) | Não |
 | [US22](./us22.md) | Permissões de acesso por aba | Permitir escolher, para cada funcionário, quais abas do sistema ele pode acessar | [Sprint 3](../sprint-03.md) | Sim |
 | [US23](./us23.md) | Envio de e-mail confiável e rastreável | Enviar os e-mails por SMTP com reserva, fila, novas tentativas e histórico de cada envio | [Sprint 3](../sprint-03.md) | Sim |
