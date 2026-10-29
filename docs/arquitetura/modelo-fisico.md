@@ -15,7 +15,6 @@ erDiagram
         varchar email UK
         varchar hashed_password
         enum role
-        boolean can_view_payments
         boolean is_active
         int created_by FK
         int updated_by FK
@@ -161,6 +160,21 @@ erDiagram
         timestamptz created_at
     }
 
+    PERMISSIONS {
+        int id PK
+        varchar key UK
+        varchar name
+        varchar description
+        int sort_order
+    }
+
+    USER_PERMISSIONS {
+        int id PK
+        int user_id FK
+        int permission_id FK
+        timestamptz created_at
+    }
+
     USERS ||--o{ USERS : created_by
     USERS ||--o{ USERS : updated_by
     USERS ||--o{ LEADS : assigned_to
@@ -180,6 +194,8 @@ erDiagram
     USERS ||--o{ PROCESS_NOTES : updated_by
     PROCESSES ||--o{ EXTERNAL_API_LOGS : process_id
     USERS ||--o{ EXTERNAL_API_LOGS : created_by
+    USERS ||--o{ USER_PERMISSIONS : user_id
+    PERMISSIONS ||--o{ USER_PERMISSIONS : permission_id
 ```
 
 ## Tabelas
@@ -193,7 +209,6 @@ erDiagram
 | `email` | varchar(255) | not null, unique, index |
 | `hashed_password` | varchar(255) | not null |
 | `role` | enum `ADMIN`/`USER` | not null, default `USER` |
-| `can_view_payments` | boolean | not null, default `false`; permite ao funcionário (`USER`) visualizar vencimentos |
 | `is_active` | boolean | not null, default `true` |
 | `created_by` | integer | FK `users.id`, nullable |
 | `updated_by` | integer | FK `users.id`, nullable |
@@ -201,6 +216,31 @@ erDiagram
 | `updated_at` | timestamptz | not null, default `now()`, on update |
 | `reset_token_hash` | varchar(64) | nullable |
 | `reset_token_expires_at` | timestamptz | nullable |
+
+### `permissions`
+
+Catálogo das abas da área do sistema que podem ser liberadas para o funcionário (`USER`), uma linha por aba. É populado pela migration com 12 abas: `landing_page`, `artigos`, `leads`, `clientes`, `agenda`, `pagamentos`, `processos`, `tarefas`, `notificacoes`, `logs_api`, `feriados` e `financeiro`. A aba Usuários não entra no catálogo porque é sempre exclusiva do administrador.
+
+| Coluna | Tipo | Restrições |
+|---|---|---|
+| `id` | integer | PK, index |
+| `key` | varchar(40) | not null, unique |
+| `name` | varchar(100) | not null |
+| `description` | varchar(255) | nullable |
+| `sort_order` | integer | not null |
+
+### `user_permissions`
+
+Abas liberadas para cada usuário. Administradores (`ADMIN`) acessam todas as abas e não dependem desta tabela.
+
+| Coluna | Tipo | Restrições |
+|---|---|---|
+| `id` | integer | PK, index |
+| `user_id` | integer | FK `users.id`, not null, index, on delete cascade |
+| `permission_id` | integer | FK `permissions.id`, not null, on delete cascade |
+| `created_at` | timestamptz | not null, default `now()` |
+
+`(user_id, permission_id)` é único (`uq_user_permissions_user_permission`).
 
 ### `leads`
 
@@ -362,3 +402,4 @@ Indice composto: `ix_process_movements_process_occurred(process_id, occurred_at)
 - `processes.client_id` usa `ondelete="RESTRICT"`, impedindo remoção direta de cliente vinculado a processo.
 - `leads.assigned_to` usa `ondelete="SET NULL"`.
 - `external_api_logs.process_id` usa `ondelete="SET NULL"` para preservar o histórico da chamada mesmo se o processo for removido.
+- `user_permissions` é apagado em cascata quando o usuário ou a permissão são removidos.
