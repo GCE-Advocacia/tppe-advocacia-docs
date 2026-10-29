@@ -69,6 +69,9 @@ nav:
       - US11 - Permissão de visualização de vencimentos: gce/backlog/us11.md
       - US21 - Migração para nuvem gratuita: gce/backlog/us21.md
       - US22 - Permissões de acesso por aba: gce/backlog/us22.md
+      - US23 - Envio de e-mail confiável: gce/backlog/us23.md
+      - US24 - Gestão do e-mail pelo admin: gce/backlog/us24.md
+      - US25 - E-mail do escritório simples: gce/backlog/us25.md
     - Sprint 1: gce/sprint-01.md
     - Sprint 2: gce/sprint-02.md
     - Sprint 3: gce/sprint-03.md
