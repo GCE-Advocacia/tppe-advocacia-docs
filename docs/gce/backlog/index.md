@@ -20,7 +20,7 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US03](./us03.md) | Controle de faturamento | Criar página para análise de entradas e saídas do escritório | [Sprint 1](../sprint-01.md) | Sim |
 | [US04](./us04.md) | Gestão de documentos | Permitir upload de documentos diretamente nos processos cadastrados | [Sprint 2](../sprint-02.md) | Sim |
 | [US05](./us05.md) | Criação e Atribuição de Tarefas do Processo | Permitir criar tarefas nos processos e atribuí-las a membros da equipe | [Sprint 1](../sprint-01.md) | Sim |
-| [US06](./us06.md) | Troca de imagens da Landing Page | Permitir alterar as imagens da Landing Page pela área administrativa | Backlog | Sim |
+| [US06](./us06.md) | Troca de imagens da Landing Page | Permitir alterar as imagens da Landing Page pela área administrativa | [Sprint 4](../sprint-04.md) | Sim |
 | [US07](./us07.md) | Troca de cores da Landing Page | Permitir alterar as cores da Landing Page pela área administrativa | [Sprint 1](../sprint-01.md) | Sim |
 | [US08](./us08.md) | Troca da logo | Permitir alterar a logo da Landing Page pela área administrativa | [Sprint 2](../sprint-02.md) | Sim |
 | [US09](./us09.md) | Armazenamento no Google Drive | Armazenar os documentos dos processos no Google Drive do escritório | [Sprint 3](../sprint-03.md) | Sim |
@@ -28,15 +28,16 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US11](./us11.md) | Permissão de visualização de vencimentos | Permitir ou negar a visualização de vencimentos para cada funcionário | [Sprint 2](../sprint-02.md) | A definir |
 | [US12](./us12.md) | Preview da Landing Page | Permitir a visualizaçao da landing page atraves de um Preview | [Sprint 2](../sprint-02.md) | A definir |
 | [US13](./us13.md) | Reestruturação da seção de Landing Page | Reestruturar a seção de Personalização em abas e decompor o módulo em componentes e hooks | [Sprint 3](../sprint-03.md) | Não |
-| [US14](./us14.md) | Sincronização dos temas com o sistema e o login | Aplicar as cores de identidade visual do tema ativo no painel interno e na tela de login | [Sprint 3](../sprint-03.md) | Não |
-| [US15](./us15.md) | Preset de tema e logos do novo escritório | Cadastrar o preset de cores e as logos oficiais da nova banca parceira na galeria de temas | [Sprint 3](../sprint-03.md) | Sim |
+| [US14](./us14.md) | Sincronização dos temas com o sistema e o login | Aplicar as cores de identidade visual do tema ativo no painel interno e na tela de login | [Sprint 4](../sprint-04.md) | Não |
+| [US15](./us15.md) | Preset de tema e logos do novo escritório | Cadastrar o preset de cores e as logos oficiais da nova banca parceira na galeria de temas | Backlog | Sim |
 | [US16](./us16.md) | Customizador de curvatura dos botões | Permitir configurar o arredondamento dos botões por presets rápidos ou valor customizado | [Sprint 3](../sprint-03.md) | Não |
-| [US17](./us17.md) | Preview multi-dispositivo (Desktop, Tablet e Mobile) | Alternar a prévia entre Desktop, Tablet e Mobile na Landing Page e visualizar o Painel do Sistema | [Sprint 3](../sprint-03.md) | Não |
+| [US17](./us17.md) | Preview multi-dispositivo (Desktop, Tablet e Mobile) | Alternar a prévia entre Desktop, Tablet e Mobile na Landing Page e visualizar o Painel do Sistema | [Sprint 4](../sprint-04.md) | Não |
 | [US21](./us21.md) | Migração da hospedagem para nuvem gratuita | Hospedar o sistema em serviços de nuvem gratuitos (Netlify, Render e Neon) | [Sprint 3](../sprint-03.md) | Não |
 | [US22](./us22.md) | Permissões de acesso por aba | Permitir escolher, para cada funcionário, quais abas do sistema ele pode acessar | [Sprint 3](../sprint-03.md) | Sim |
 | [US23](./us23.md) | Envio de e-mail confiável e rastreável | Enviar os e-mails por SMTP com reserva, fila, novas tentativas e histórico de cada envio | [Sprint 3](../sprint-03.md) | Sim |
 | [US24](./us24.md) | Gestão do e-mail pelo admin | Configurar o envio pela tela, e-mails com a marca do escritório e convite de funcionário por link | [Sprint 3](../sprint-03.md) | Não |
 | [US25](./us25.md) | E-mail do escritório simples | Definir nome e responder para dos e-mails e ver se eles estão chegando, sem campos técnicos | [Sprint 3](../sprint-03.md) | Não |
+| [US26](./us26.md) | Blindagem da personalização e preview | Centralizar a gestão de conteúdo institucional, upload com fotos e preview responsivo | [Sprint 4](../sprint-04.md) | Não |
 
 ## Subgrupos
 
