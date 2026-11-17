@@ -1789,7 +1789,7 @@
 <td>Sincronização dos temas com o sistema e login</td>
 <td>Gabriel, Fabio, Daniel</td>
 <td>Concluído</td>
-<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/29">PR Backend #29</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/27">PR Frontend #27</a></td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/29">PR Backend #29</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/27">PR Frontend #27</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/37">PR Frontend #37</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/38">PR Frontend #38</a></td>
 </tr>
 <tr>
 <td><a href="../backlog/us26/">US26</a></td>
@@ -1797,6 +1797,27 @@
 <td>Gabriel, Fabio, Daniel</td>
 <td>Concluído</td>
 <td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/30">PR Backend #30</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/28">PR Frontend #28</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/29">PR Frontend #29</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/31">PR Frontend #31</a></td>
+</tr>
+<tr>
+<td><a href="../backlog/us26/#us261-temas-cores-validacoes-de-midia-e-novos-testes">US26.1</a></td>
+<td>Auditoria de temas, paleta de cores e validações de mídia</td>
+<td>Fabio</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/30">PR Backend #30</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/28">PR Frontend #28</a></td>
+</tr>
+<tr>
+<td><a href="../backlog/us26/#us262-logos-botoes-preview-responsivo-e-guardas-de-rota">US26.2</a></td>
+<td>Preview responsivo, upload com corte e múltiplos viewports</td>
+<td>Daniel</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/31">PR Frontend #31</a></td>
+</tr>
+<tr>
+<td><a href="../backlog/us26/#us263-conteudo-institucional-enquadramento-de-fotos-bug-08-e-testes-e2e">US26.3</a></td>
+<td>Auditoria de conteúdo institucional, BUG-08 e suíte E2E</td>
+<td>Gabriel</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/29">PR Frontend #29</a></td>
 </tr>
 <tr>
 <td><a href="../backlog/us06/">US06</a></td>
@@ -1862,6 +1883,27 @@
 <td>Concluído</td>
 <td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/39">PR Backend #39</a></td>
 </tr>
+<tr>
+<td>Deadlock ao salvar/descartar na personalização</td>
+<td>O salvamento de conteúdo e temas concorriam no estado do formulário gerando travamento da interface. O fluxo foi desacoplado isolando persistência de temas e reset de estado</td>
+<td>Gabriel</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/29">PR Frontend #29</a></td>
+</tr>
+<tr>
+<td>Aviso de alterações não salvas por aba</td>
+<td>O pop-up de alerta de alterações pendentes era exibido apenas na aba de conteúdo da personalização. O guard foi estendido para interceptar navegações em todas as abas e rotas do sistema</td>
+<td>Gabriel</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/27">PR Frontend #27</a></td>
+</tr>
+<tr>
+<td>Leitura de configuração vazia no backend</td>
+<td>A rota <code>GET /office-config</code> e o payload de atualização falhavam quando <code>office_title</code> era nulo ou vazio. Agora o backend trata o campo opcionalmente sem interromper o carregamento da personalização</td>
+<td>Gabriel</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/37">PR Backend #37</a></td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -1869,7 +1911,7 @@
 <ul>
 <li><em>Líder da Apresentação</em>: A definir</li>
 <li><em>Total de US concluídas</em>: 5 de 6</li>
-<li><em>Bugs corrigidos</em>: 3</li>
+<li><em>Bugs corrigidos</em>: 6</li>
 <li><em>US em revisão</em>: 0</li>
 <li><em>Início da Sprint</em>: 29/10/2026</li>
 <li><em>Fim da Sprint</em>: 16/11/2026</li>
@@ -1897,6 +1939,12 @@
 <td>17/11/2026</td>
 <td>Inclusão da US27 e das correções de bugs do subgrupo 3</td>
 <td>[Artur]</td>
+</tr>
+<tr>
+<td><code>1.2</code></td>
+<td>17/11/2026</td>
+<td>Inclusão de correções de bugs de personalização/backend e PRs complementares da US14</td>
+<td>[Gabriel]</td>
 </tr>
 </tbody>
 </table>
