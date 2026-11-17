@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#us15-preset-de-tema-e-logos-do-novo-escritorio" class="md-skip">
+        <a href="#us15-preset-de-tema-do-novo-escritorio-rufino-rebua-advogados" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -1209,6 +1209,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../us26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US26 - Blindagem da personalização e preview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1288,6 +1316,34 @@
     
   
     Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sprint-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
   
 
     
@@ -1662,7 +1718,7 @@
   
 
 
-<h1 id="us15-preset-de-tema-e-logos-do-novo-escritorio">US15 — Preset de tema e logos do novo escritório<a class="headerlink" href="#us15-preset-de-tema-e-logos-do-novo-escritorio" title="Permanent link">&para;</a></h1>
+<h1 id="us15-preset-de-tema-do-novo-escritorio-rufino-rebua-advogados">US15 — Preset de tema do novo escritório (Rufino &amp; Rebuá Advogados)<a class="headerlink" href="#us15-preset-de-tema-do-novo-escritorio-rufino-rebua-advogados" title="Permanent link">&para;</a></h1>
 <p>Item do <a href="../">Backlog do Produto</a> do projeto de advocacia na disciplina de GCE.</p>
 <h2 id="informacoes">Informações<a class="headerlink" href="#informacoes" title="Permanent link">&para;</a></h2>
 <table>
@@ -1679,7 +1735,7 @@
 </tr>
 <tr>
 <td>Sprint</td>
-<td><a href="../../sprint-03/">Sprint 3</a></td>
+<td>Backlog</td>
 </tr>
 <tr>
 <td>Responsáveis</td>
@@ -1691,7 +1747,7 @@
 </tr>
 <tr>
 <td>Status</td>
-<td>A fazer</td>
+<td>Despriorizada</td>
 </tr>
 <tr>
 <td>Depende de</td>
@@ -1700,30 +1756,34 @@
 </tbody>
 </table>
 <h2 id="historia-de-usuario">História de Usuário<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
-<p>Como administrador do sistema, quero que a identidade visual oficial da nova banca parceira (paleta
-de cores extraída de seus ativos e logos oficiais) seja cadastrada no sistema substituindo o preset
-genérico "Esmeralda &amp; Âmbar Corporativo" na biblioteca de temas, para que o novo escritório possa
-adotar sua própria identidade visual completa com um clique na galeria de temas, mantendo a
-integridade do banco de dados e a conformidade <em>white-label</em>.</p>
+<p>Como administrador do sistema, quero que a identidade visual oficial da nova banca parceira (<em>Rufino &amp; Rebuá Advogados</em>)
+seja cadastrada no sistema substituindo o preset genérico "Esmeralda &amp; Âmbar Corporativo" na biblioteca de temas, para que o
+novo escritório possa adotar sua própria paleta de cores institucional com um clique na galeria de temas, mantendo a
+integridade do banco de dados, o desacoplamento do conteúdo da Landing Page e a conformidade <em>white-label</em>.</p>
+<blockquote>
+<p><strong>Nota de Alinhamento e Delimitação de Escopo:</strong>
+O escopo desta história foca <strong>exclusivamente na criação e cadastro do preset de tema (paleta de cores e botões do sistema)</strong> na biblioteca de temas (<code>ThemeGallery</code>).
+<strong>Ficam explicitamente fora de escopo:</strong> alterações nos dados de conteúdo da Landing Page (textos institucionais, Hero, bio do advogado, diferenciais e áreas de atuação de <code>office_config</code>) e substituição/upload forçado das logos ativas do escritório, assegurando integridade e zero impacto sobre o ambiente de produção.</p>
+</blockquote>
 <h2 id="tarefas">Tarefas<a class="headerlink" href="#tarefas" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Analisar os canais institucionais e os arquivos de logos da nova banca parceira (<em>Rufino &amp; Rebuá Advogados</em>) para definir os códigos hexadecimais oficiais da paleta;</li>
-<li>Desenvolver migração no Alembic executando atualização segura e idempotente sobre o tema pré-definido "Esmeralda &amp; Âmbar Corporativo";</li>
-<li>Preservar o identificador primário do tema na tabela <code>landing_page_themes</code> para assegurar integridade referencial com <code>office_config.theme_id</code>;</li>
+<li>Definir a paleta oficial de 12 cores institucionais e configurações de botões do sistema para a banca parceira (<em>Rufino &amp; Rebuá Advogados</em>);</li>
+<li>Desenvolver migração no Alembic executando atualização segura e idempotente sobre o tema pré-definido "Esmeralda &amp; Âmbar Corporativo" na tabela <code>landing_page_themes</code>;</li>
+<li>Preservar o identificador primário do tema (<code>id = 3</code>) para assegurar integridade referencial com chaves estrangeiras (<code>office_config.theme_id</code>);</li>
 <li>Implementar a rotina de <code>downgrade()</code> na migração do Alembic garantindo reversibilidade completa;</li>
-<li>Configurar os ativos de logos oficiais e favicon da nova banca nos respectivos slots da aba Identidade Visual;</li>
-<li>Validar a exibição do novo cartão na <code>ThemeGallery</code> com selo de tema pré-definido, sem consumir a cota de temas personalizados do usuário;</li>
-<li>Criar testes automatizados com <code>pytest</code> no módulo <code>office_config</code> validando o retorno do preset atualizado via <code>GET /office-config/themes</code>.</li>
+<li>Validar a exibição do novo cartão na <code>ThemeGallery</code> com selo de tema pré-definido ("Padrão"), sem consumir a cota de 6 temas personalizados do usuário;</li>
+<li>Criar testes automatizados com <code>pytest</code> no módulo <code>office_config</code> validando o retorno do preset e sua aplicação via API;</li>
+<li>Atualizar testes de frontend (<code>Playwright</code>) para manter o alinhamento com a nova lista de temas pré-definidos.</li>
 </ul>
 <h2 id="criterios-de-aceitacao">Critérios de Aceitação<a class="headerlink" href="#criterios-de-aceitacao" title="Permanent link">&para;</a></h2>
 <ul>
-<li>O tema da nova banca parceira deve substituir o tema "Esmeralda &amp; Âmbar Corporativo" na <code>ThemeGallery</code> mantendo o selo de tema pré-definido;</li>
-<li>O tema não deve consumir a cota de temas personalizados do administrador;</li>
+<li>O tema da nova banca parceira deve substituir o tema "Esmeralda &amp; Âmbar Corporativo" na <code>ThemeGallery</code> mantendo o selo de tema pré-definido ("Padrão");</li>
+<li>O tema não deve consumir a cota de temas personalizados do administrador (<code>is_predefined = True</code>);</li>
 <li>A migração do Alembic deve executar <code>upgrade</code> e <code>downgrade</code> com sucesso e idempotência, preservando o <code>id</code> original do registro;</li>
-<li>Aplicar o tema na galeria deve preencher instantaneamente toda a paleta de cores e refletir na pré-visualização (<code>LandingPreview</code>);</li>
+<li>Clicar em "Aplicar tema selecionado" na <code>ThemeGallery</code> deve preencher instantaneamente toda a paleta de cores e refletir na pré-visualização (<code>LandingPreview</code>);</li>
+<li>A aplicação do tema altera apenas as variáveis de estilo, preservando 100% dos textos institucionais e logos/imagens já configuradas na Landing Page;</li>
 <li>O administrador deve conseguir alternar em um clique entre o tema clássico e o tema da nova banca na <code>ThemeGallery</code>;</li>
-<li>As logos oficiais e o favicon da nova banca devem ser exibidos corretamente nos slots correspondentes;</li>
-<li>A suíte de testes automatizados do backend (<code>pytest</code>) deve validar os dados do novo tema pré-definido retornado pela API.</li>
+<li>A suíte de testes automatizados do backend (<code>pytest</code>) e frontend (<code>Playwright</code>) deve validar os dados do novo tema pré-definido retornado pela API.</li>
 </ul>
 <h2 id="observacoes">Observações<a class="headerlink" href="#observacoes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1788,7 +1848,7 @@ integridade do banco de dados e a conformidade <em>white-label</em>.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

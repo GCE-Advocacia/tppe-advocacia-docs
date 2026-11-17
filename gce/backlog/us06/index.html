@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -797,6 +797,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observações
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1198,6 +1209,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../us26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US26 - Blindagem da personalização e preview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1277,6 +1316,34 @@
     
   
     Sprint 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sprint-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint 4
   
 
     
@@ -1620,6 +1687,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observações
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1657,11 +1735,11 @@
 </tr>
 <tr>
 <td>Sprint</td>
-<td>Backlog</td>
+<td><a href="../../sprint-04/">Sprint 4</a></td>
 </tr>
 <tr>
 <td>Responsáveis</td>
-<td>A definir</td>
+<td>Gabriel, Fabio e Daniel</td>
 </tr>
 <tr>
 <td>Definido pelo cliente</td>
@@ -1669,28 +1747,33 @@
 </tr>
 <tr>
 <td>Status</td>
-<td>Não planejada</td>
+<td>Concluído</td>
 </tr>
 </tbody>
 </table>
 <h2 id="historia-de-usuario">História de Usuário<a class="headerlink" href="#historia-de-usuario" title="Permanent link">&para;</a></h2>
-<p>Como administrador, quero alterar as imagens da Landing Page pela área administrativa
-para personalizar o site sem modificar diretamente o código.</p>
+<p>Como administrador, quero alterar e reposicionar as imagens da Landing Page pela área administrativa para personalizar o site sem modificar diretamente o código.</p>
 <h2 id="tarefas">Tarefas<a class="headerlink" href="#tarefas" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Criar configuração de imagens da Landing Page;</li>
-<li>Criar campo de upload na área administrativa;</li>
-<li>Validar formato da imagem;</li>
-<li>Validar tamanho da imagem;</li>
-<li>Salvar a imagem;</li>
-<li>Atualizar a Landing Page automaticamente.</li>
+<li>Auditar o fluxo herdado de upload e persistência de imagens da Landing Page;</li>
+<li>Validar formato e tamanho de arquivos de imagem no upload;</li>
+<li>Corrigir o defeito de sensibilidade e proporção de aspecto no modal de reposicionamento (<code>BUG-08</code>);</li>
+<li>Desenvolver suíte de testes automatizados E2E cobrindo upload, enquadramento e persistência (<code>TC-S3-06</code>, <code>TC-S3-07</code>, <code>TC-S3-09</code>);</li>
+<li>Atualizar a Landing Page pública com as novas imagens configuradas.</li>
 </ul>
 <h2 id="criterios-de-aceitacao">Critérios de Aceitação<a class="headerlink" href="#criterios-de-aceitacao" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Apenas usuários administradores devem poder alterar as imagens;</li>
-<li>Deve ser possível realizar upload de uma nova imagem;</li>
-<li>A imagem alterada deve aparecer na Landing Page;</li>
-<li>A alteração deve permanecer salva após reiniciar o sistema.</li>
+<li>Apenas usuários administradores autenticados podem alterar as imagens;</li>
+<li>Deve ser possível realizar upload de nova imagem em formatos válidos (JPEG, PNG, WEBP);</li>
+<li>O modal de reposicionamento deve permitir ajuste fino da área visível sem saltos no ponteiro e com miniatura em proporção 1:1;</li>
+<li>A imagem alterada deve ser exibida corretamente na vitrine pública e persistir após recarregamento;</li>
+<li>Os testes automatizados da funcionalidade devem passar com 100% de sucesso.</li>
+</ul>
+<h2 id="observacoes">Observações<a class="headerlink" href="#observacoes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>O fluxo inicial foi construído em TPPE e auditado/concluído na Sprint 4 com a correção do defeito de escala (<code>BUG-08</code>) e a criação dos testes automatizados E2E.</li>
+<li>PR Frontend: <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/29">#29</a>.</li>
+<li>Card no quadro Kanban: <a href="https://github.com/GCE-Advocacia/.github/issues/7">US06</a>.</li>
 </ul>
 
 
@@ -1750,7 +1833,7 @@ para personalizar o site sem modificar diretamente o código.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
