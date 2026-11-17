@@ -1133,6 +1133,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/us27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US27 - Migração das contas para o cliente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1307,6 +1335,17 @@
     <span class="md-ellipsis">
       
         Detalhamento por história
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correcoes-de-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correções de bugs
       
     </span>
   </a>
@@ -1653,6 +1692,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#correcoes-de-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correções de bugs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1707,6 +1757,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Artur / Bessa / Isabelle</td>
+<td style="text-align: right;">1</td>
+<td><a href="../backlog/us27/">US27</a></td>
+<td>Migração das contas de nuvem e do Google para o cliente</td>
+</tr>
 <tr>
 <td>Gabriel / Fabio / Daniel</td>
 <td style="text-align: right;">4</td>
@@ -1763,13 +1819,57 @@
 <td>Concluído</td>
 <td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/23">PR Frontend #23</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/29">PR Frontend #29</a></td>
 </tr>
+<tr>
+<td><a href="../backlog/us27/">US27</a></td>
+<td>Migração das contas de nuvem e do Google para o cliente</td>
+<td>Artur, Bessa, Isabelle</td>
+<td>Concluído</td>
+<td>Configuração nos painéis do Google Cloud, Render, Netlify e Neon (sem PR)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="correcoes-de-bugs">Correções de bugs<a class="headerlink" href="#correcoes-de-bugs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Bug</th>
+<th>Descrição</th>
+<th>Responsável</th>
+<th>Status</th>
+<th>PR/Commits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validação de CPF/CNPJ</td>
+<td>O cadastro de clientes só conferia a quantidade de dígitos e aceitava CPFs e CNPJs inválidos. Agora o backend e o frontend validam os dígitos verificadores e rejeitam sequências repetidas</td>
+<td>Isabelle</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/36">PR Backend #36</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/35">PR Frontend #35</a></td>
+</tr>
+<tr>
+<td>XSS nos artigos</td>
+<td>O conteúdo dos artigos era salvo e exibido sem sanitização, permitindo executar scripts no navegador de quem abrisse o artigo. Agora o backend sanitiza o HTML ao salvar (<code>bleach</code>) e o frontend ao exibir (<code>DOMPurify</code>)</td>
+<td>Isabelle</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/38">PR Backend #38</a>, <a href="https://github.com/GCE-Advocacia/tppe-advocacia-frontend/pull/36">PR Frontend #36</a></td>
+</tr>
+<tr>
+<td>Pasta duplicada no Google Drive</td>
+<td>A pasta raiz dos documentos era criada de novo ao reconectar o Drive ou quando dois uploads aconteciam ao mesmo tempo. Agora o sistema procura a pasta existente no Drive antes de criar e trava a criação no banco</td>
+<td>Artur</td>
+<td>Concluído</td>
+<td><a href="https://github.com/GCE-Advocacia/tppe-advocacia-backend/pull/39">PR Backend #39</a></td>
+</tr>
 </tbody>
 </table>
 <hr />
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
 <ul>
 <li><em>Líder da Apresentação</em>: A definir</li>
-<li><em>Total de US concluídas</em>: 4 de 5</li>
+<li><em>Total de US concluídas</em>: 5 de 6</li>
+<li><em>Bugs corrigidos</em>: 3</li>
 <li><em>US em revisão</em>: 0</li>
 <li><em>Início da Sprint</em>: 29/10/2026</li>
 <li><em>Fim da Sprint</em>: 16/11/2026</li>
@@ -1791,6 +1891,12 @@
 <td>16/11/2026</td>
 <td>Criação do relatório da Sprint 4</td>
 <td>[Gabriel]</td>
+</tr>
+<tr>
+<td><code>1.1</code></td>
+<td>17/11/2026</td>
+<td>Inclusão da US27 e das correções de bugs do subgrupo 3</td>
+<td>[Artur]</td>
 </tr>
 </tbody>
 </table>
