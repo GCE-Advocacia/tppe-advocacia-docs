@@ -38,6 +38,7 @@ planejamento de cada sprint, e fica registrada na página da sprint corresponden
 | [US24](./us24.md) | Gestão do e-mail pelo admin | Configurar o envio pela tela, e-mails com a marca do escritório e convite de funcionário por link | [Sprint 3](../sprint-03.md) | Não |
 | [US25](./us25.md) | E-mail do escritório simples | Definir nome e responder para dos e-mails e ver se eles estão chegando, sem campos técnicos | [Sprint 3](../sprint-03.md) | Não |
 | [US26](./us26.md) | Blindagem da personalização e preview | Centralizar a gestão de conteúdo institucional, upload com fotos e preview responsivo | [Sprint 4](../sprint-04.md) | Não |
+| [US27](./us27.md) | Migração das contas para o cliente | Passar as APIs do Google e a hospedagem no Render, Netlify e Neon para contas do escritório | [Sprint 4](../sprint-04.md) | Não |
 
 ## Subgrupos
 

@@ -78,6 +78,7 @@ nav:
       - US24 - Gestão do e-mail pelo admin: gce/backlog/us24.md
       - US25 - E-mail do escritório simples: gce/backlog/us25.md
       - US26 - Blindagem da personalização e preview: gce/backlog/us26.md
+      - US27 - Migração das contas para o cliente: gce/backlog/us27.md
     - Sprint 1: gce/sprint-01.md
     - Sprint 2: gce/sprint-02.md
     - Sprint 3: gce/sprint-03.md
