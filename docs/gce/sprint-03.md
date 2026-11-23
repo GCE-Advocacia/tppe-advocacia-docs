@@ -53,8 +53,8 @@ Nenhum vídeo adicionado ainda.
 
 | Versão | Data | Descrição | Autor(es) |
 |---|---|---|---|
-| `1.0` | 26/10/2026 | Criação do relatório da Sprint 3 | [Artur] |
-| `1.1` | 28/10/2026 | Conclusão da US09 e da US21 | [Artur] |
-| `1.2` | 28/10/2026 | Conclusão da US22 | [Lucas] |
-| `1.3` | 28/10/2026 | Inclusão e conclusão da US23, US24 e US25 | [Matheus] |
-| `1.4` | 29/10/2026 | Documentação da US13, US14, US15, US16 e US17 e conclusão da US13 e da US16 | [Gabriel] |
+| `1.0` | 26/10/2026 | Criação do relatório da Sprint 3 | [Artur H. Krauspenhar](https://github.com/Arturhk05) |
+| `1.1` | 28/10/2026 | Conclusão da US09 e da US21 | [Artur H. Krauspenhar](https://github.com/Arturhk05) |
+| `1.2` | 28/10/2026 | Conclusão da US22 | [Lucas Branco](https://github.com/lucasbbranco) |
+| `1.3` | 28/10/2026 | Inclusão e conclusão da US23, US24 e US25 | [Matheus Rodrigues](https://github.com/mrodrigues14) |
+| `1.4` | 29/10/2026 | Documentação da US13, US14, US15, US16 e US17 e conclusão da US13 e da US16 | [Gabriel Fernando](https://github.com/MMcLovin) |

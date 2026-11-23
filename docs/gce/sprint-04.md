@@ -55,6 +55,6 @@
 
 | Versão | Data | Descrição | Autor(es) |
 |---|---|---|---|
-| `1.0` | 16/11/2026 | Criação do relatório da Sprint 4 | [Gabriel] |
-| `1.1` | 17/11/2026 | Inclusão da US27 e das correções de bugs do subgrupo 3 | [Artur] |
-| `1.2` | 17/11/2026 | Inclusão de correções de bugs de personalização/backend e PRs complementares da US14 | [Gabriel] |
+| `1.0` | 16/11/2026 | Criação do relatório da Sprint 4 | [Gabriel Fernando](https://github.com/MMcLovin) |
+| `1.1` | 17/11/2026 | Inclusão da US27 e das correções de bugs do subgrupo 3 | [Artur H. Krauspenhar](https://github.com/Arturhk05) |
+| `1.2` | 17/11/2026 | Inclusão de correções de bugs de personalização/backend e PRs complementares da US14 | [Gabriel Fernando](https://github.com/MMcLovin) |

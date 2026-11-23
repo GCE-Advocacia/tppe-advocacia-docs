@@ -48,9 +48,9 @@ Nenhum vídeo adicionado ainda.
 
 | Versão | Data | Descrição | Autor(es) |
 |---|---|---|---|
-| `1.0` | 05/10/2026 | Criação do relatório da Sprint 2 com a US04 | [Artur] |
-| `1.1` | 05/10/2026 | Adiciona a permissão de visualização de vencimentos (US11) | [Lucas] |
-| `1.2` | 05/10/2026 | Adiciona os lembretes de pagamento por e-mail no backend e frontend | [Anne] |
-| `1.3` | 05/10/2026 | Adiciona as historias (US08), (US10), (US12) | [Fabio] |
-| `1.4` | 05/10/2026 | Adiciona a historia (US20| [Bessazs] |
-| `1.5` | 06/10/2026 | Marca a US11 como concluída | [Lucas] |
+| `1.0` | 05/10/2026 | Criação do relatório da Sprint 2 com a US04 | [Artur H. Krauspenhar](https://github.com/Arturhk05) |
+| `1.1` | 05/10/2026 | Adiciona a permissão de visualização de vencimentos (US11) | [Lucas Branco](https://github.com/lucasbbranco) |
+| `1.2` | 05/10/2026 | Adiciona os lembretes de pagamento por e-mail no backend e frontend | [Anne de Capdeville](https://github.com/nanecapde) |
+| `1.3` | 05/10/2026 | Adiciona as historias (US08), (US10), (US12) | [Fabio Gabriel](https://github.com/fabinsz) |
+| `1.4` | 05/10/2026 | Adiciona a historia (US20) | [Vitor Pereira Bessa](https://github.com/Bessazs) |
+| `1.5` | 06/10/2026 | Marca a US11 como concluída | [Lucas Branco](https://github.com/lucasbbranco) |
