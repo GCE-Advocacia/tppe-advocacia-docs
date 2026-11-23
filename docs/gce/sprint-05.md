@@ -35,4 +35,4 @@
 
 | Versão | Data | Descrição | Autor(es) |
 |---|---|---|---|
-| `1.0` | 22/11/2026 | Criação do relatório da Sprint 5 com registro das correções de bugs de personalização | [Gabriel] |
+| `1.0` | 22/11/2026 | Criação do relatório da Sprint 5 com registro das correções de bugs de personalização | [Gabriel Fernando](https://github.com/MMcLovin) |

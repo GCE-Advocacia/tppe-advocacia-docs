@@ -52,5 +52,5 @@
 
 | Versão | Data | Descrição | Autor(es) |
 |---|---|---|---|
-| `1.0` | 16/09/2026 | Criação do relatório da Sprint 1 | [Pablo Cunha] |
-| `1.1` | 16/09/2026 | Alteração de estrutura do relatório da Sprint 1 | [Pablo Cunha] |
+| `1.0` | 16/09/2026 | Criação do relatório da Sprint 1 | [Pablo Cunha](https://github.com/Pabloo8) |
+| `1.1` | 16/09/2026 | Alteração de estrutura do relatório da Sprint 1 | [Pablo Cunha](https://github.com/Pabloo8) |
